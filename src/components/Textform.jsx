@@ -24,6 +24,7 @@ function Textform(props) {
             </div>
             <button
                 className="btn btn-primary mx-1"
+                disabled={inputText.length <= 0}
                 onClick={() => {
                     setInputText(inputText.toUpperCase());
                     props.showAlert("Converted to uppercase", "success");
@@ -33,6 +34,7 @@ function Textform(props) {
                 To Uppercase
             </button>
             <button
+                disabled={inputText.length <= 0}
                 className="btn btn-primary mx-1"
                 onClick={() => {
                     setInputText(inputText.toLowerCase());
@@ -44,6 +46,7 @@ function Textform(props) {
             </button>
             <button
                 className="btn btn-primary mx-1"
+                disabled={inputText.length <= 0}
                 onClick={() => {
                     var text = document.getElementById("myBox");
                     text.select();
@@ -57,6 +60,7 @@ function Textform(props) {
             </button>
             <button
                 className="btn btn-primary mx-1"
+                disabled={inputText.length <= 0}
                 onClick={() => {
                     const myBox = document.getElementById("myBox");
                     if (myBox) {
@@ -75,6 +79,7 @@ function Textform(props) {
             </button>
             <button
                 className="btn btn-primary mx-1"
+                disabled={inputText.length <= 0}
                 onClick={() => {
                     if(inputText.length>0){
                     setInputText("");
