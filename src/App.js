@@ -2,10 +2,10 @@
 import "./App.css";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
+// import About from "./components/About";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -21,7 +21,7 @@ function App() {
     }, 1000);
   };
   return (
-    <Router>
+    // <Router>
     <>
       <Navbar
         title="TextUtils"
@@ -42,11 +42,11 @@ function App() {
       <Alert alert={alert} show />
       <div className="container my-3">
         
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
+        {/* <Switch> */}
+          {/* <Route path="/about"> */}
+            {/* <About /> */}
+          {/* </Route> */}
+          {/* <Route path="/"> */}
           <Textform
           mode={mode}
           showAlert={showAlert}
@@ -54,14 +54,14 @@ function App() {
             setMode(mode === "light" ? "dark" : "light");
           }}
         />
-          </Route>
-        </Switch>
+          {/* </Route> */}
+        {/* </Switch> */}
 
       </div>
 
       {/* // <Navbar /> */}
     </>
-    </Router>
+    // </Router>
   );
   
 }
